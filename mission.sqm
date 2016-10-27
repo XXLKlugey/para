@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={20338.691,55.837208,7712.5962};
-		dir[]={-0.6731258,-0.50465125,-0.54059613};
-		up[]={-0.39347103,0.86332029,-0.31600145};
-		aside[]={-0.62617701,-2.1816231e-007,0.77968889};
+		pos[]={20367.438,70.325691,7715.3394};
+		dir[]={-0.68155402,-0.56712592,-0.46246159};
+		up[]={-0.46929187,0.82362813,-0.3184332};
+		aside[]={-0.56148738,-2.3087341e-007,0.82749367};
 	};
 };
 binarizationWanted=0;
@@ -7467,8 +7467,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20343.689,26.833847,7698.9937};
-						angles[]={0.086446159,3.4215434,0.081157811};
+						position[]={20336.1,26.398706,7690.6318};
+						angles[]={0.013334315,3.4215434,0.20762436};
 					};
 					side="East";
 					flags=7;
@@ -7477,7 +7477,6 @@ class Mission
 					};
 					id=359;
 					type="O_crew_F";
-					atlOffset=-0.016002655;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7532,7 +7531,7 @@ class Mission
 				};
 			};
 			id=358;
-			atlOffset=-0.016002655;
+			atlOffset=-0.01984024;
 		};
 		class Item34
 		{
@@ -7629,7 +7628,6 @@ class Mission
 				ammo=0;
 				lock="LOCKED";
 				fuel=0;
-				placementRadius=1500;
 			};
 			id=364;
 			type="B_MBT_01_mlrs_F";
@@ -7663,8 +7661,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={20343.541,28.645514,7699.1011};
-				angles[]={0.086446159,3.4215434,0.081157811};
+				position[]={20335.951,28.210373,7690.7393};
+				angles[]={0.013334315,3.4215434,0.20762436};
 			};
 			side="East";
 			flags=6;
@@ -7674,11 +7672,10 @@ class Mission
 				ammo=0;
 				lock="LOCKED";
 				fuel=0;
-				placementRadius=1500;
 			};
 			id=365;
 			type="B_MBT_01_mlrs_F";
-			atlOffset=-0.016002655;
+			atlOffset=-0.01984024;
 			class CustomAttributes
 			{
 				class Attribute0

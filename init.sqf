@@ -3,28 +3,26 @@ private _side = EAST;
 private _type = "B_MBT_01_mlrs_F";
 
 private _vehtype = [];
-private _id = 1;
+private _pos = [];
+private _dist = 0;
 {
 	if (side _x == _side && vehicle _x isKindOf _type) then
 	{	
-		_id = _id+1;
 		_vehtype set [count _vehtype, _x];
 	};
 }forEach vehicles;
 
 {	
-	private _vehgrp = group _x;
+	_pos = [getPos _x, 0, 1500, 5, 0, 20, 0] call BIS_fnc_findSafePos;
+	_x setPos _pos;
 	private _dir = direction _x;
 	private _xdir = 5*sin(_dir);
 	private _ydir = 5*cos(_dir);
 	_x lookAt [(getPos _x select 0)+_xdir,(getPos _x select 1)+_ydir,getPos _x select 2];
+	private _vehgrp = group _x;
 	_vehgrp setCombatMode "BLUE";
 	_vehgrp setBehaviour "CARELESS";
-	private _pos = getPos _x findEmptyPosition[900,1200];
-	_vehgrp addWaypoint [_pos, 0];	
-	[_vehgrp, 0] setWaypointType "SCRIPTED";
-	[_vehgrp, 0] setWaypointScript "A3\functions_f\waypoints\fn_wpArtillery.sqf";
-	[_vehgrp, 0] setWaypointCombatMode "NO CHANGE";
+	_dist = 0;
 }forEach _vehtype;
 {
 	if(side _x == WEST) then

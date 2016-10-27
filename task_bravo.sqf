@@ -2,6 +2,7 @@ private _side = EAST;
 private _type = "B_MBT_01_mlrs_F";
 
 private _vehtype = [];
+private _spos = [];
 private _tasktype = [];
 private _task = "";
 private _naming = ["st","nd","rd","th","th","th"];
@@ -38,8 +39,9 @@ private _id = 1;
 				{	
 					private _vehgrp = group _x;
 					_vehgrp setCombatMode "BLUE";
-					_vehgrp setBehaviour "CARELESS";
-					[_vehgrp, 0] setWaypointCombatMode "NO CHANGE";
+					_vehgrp setBehaviour "CARELESS";	
+					deleteWaypoint [_vehgrp, 0];
+					
 					private _dir = direction _x;
 					private _xdir = 5*sin(_dir);
 					private _ydir = 5*cos(_dir);
@@ -99,7 +101,18 @@ private _id = 1;
 				if (canMove _x && canFire _x && (count (crew _x)) > 0) then
 				{
 					_vehgrp = group _x;
-					_vehgrp setCurrentWaypoint [_vehgrp, 0];
+					
+					private _dist = 0;
+		
+					while {_dist < 800} do
+					{
+					_spos = [getPos _x, 800, 1600, 5, 0, 20, 0] call BIS_fnc_findSafePos;
+					_dist = [getPos _x select 0, getPos _x select 1] distance2D [_spos select 0, _spos select 1];
+					};
+					
+					_vehgrp addWaypoint [_spos, 10, 0];
+					[_vehgrp, 0] setWaypointType "SCRIPTED";
+					[_vehgrp, 0] setWaypointScript "A3\functions_f\waypoints\fn_wpArtillery.sqf";
 					[_vehgrp, 0] setWaypointCombatMode "RED";
 				}
 				else
@@ -120,7 +133,7 @@ private _id = 1;
 		
 		_id = 0;
 		
-		for [{_i=0}, {_i<12}, {_i=_i+1}] do
+		for [{_i=0}, {_i<18}, {_i=_i+1}] do
 		{
 			if (alive _x) then
 			{
