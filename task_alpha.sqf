@@ -9,8 +9,9 @@ while {_counter < playersNumber WEST} do
 			_counter = _counter + 1;
 		};
 	} forEach allPlayers;
+	
+	sleep 5;
 };
 
-sleep 5;
 
 TASK_ALPHA setTaskState "SUCCEEDED";
