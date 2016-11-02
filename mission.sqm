@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=366;
+		nextID=608;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={20367.438,70.325691,7715.3394};
-		dir[]={-0.68155402,-0.56712592,-0.46246159};
-		up[]={-0.46929187,0.82362813,-0.3184332};
-		aside[]={-0.56148738,-2.3087341e-007,0.82749367};
+		pos[]={23334.568,62.616726,18147.441};
+		dir[]={0.45795152,-0.87333518,-0.16677453};
+		up[]={0.82077569,0.48681784,-0.29890874};
+		aside[]={-0.34223834,2.3462635e-006,-0.93973249};
 	};
 };
 binarizationWanted=0;
@@ -63,13 +63,14 @@ addons[]=
 	"A3_Weapons_F_Explosives",
 	"ace_explosives",
 	"A3_Weapons_F_Pistols_ACPC2",
-	"A3_Armor_F_Gamma_MBT_01"
+	"A3_Armor_F_Gamma_MBT_01",
+	"A3_Armor_F_EPC_MBT_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=33;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -284,6 +285,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item32
+		{
+			className="A3_Armor_F_EPC";
+			name="Arma 3 Win Episode - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=1250191;
@@ -291,7 +299,6 @@ class ScenarioData
 {
 	author="Klugey & Simon Eff";
 	respawnDialog=0;
-	disabledAI=1;
 	respawn=3;
 	respawnDelay=30.000002;
 };
@@ -594,7 +601,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			dataType="Marker";
@@ -5968,7 +5975,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20482.879,2034.0846,7551.0703};
+						position[]={20482.879,2034.0845,7551.0698};
 					};
 					side="West";
 					flags=3;
@@ -6127,7 +6134,7 @@ class Mission
 					};
 					id=211;
 					type="B_soldier_PG_F";
-					atlOffset=2000.0001;
+					atlOffset=2000;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6195,7 +6202,7 @@ class Mission
 			{
 			};
 			id=210;
-			atlOffset=2000.0001;
+			atlOffset=2000;
 		};
 		class Item27
 		{
@@ -7467,8 +7474,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20336.1,26.398706,7690.6318};
-						angles[]={0.013334315,3.4215434,0.20762436};
+						position[]={20482.879,34.084488,7551.0708};
+						angles[]={0,3.4215434,0};
 					};
 					side="East";
 					flags=7;
@@ -7477,6 +7484,7 @@ class Mission
 					};
 					id=359;
 					type="O_crew_F";
+					atlOffset=1.9073486e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7531,7 +7539,7 @@ class Mission
 				};
 			};
 			id=358;
-			atlOffset=-0.01984024;
+			atlOffset=-0.00045394897;
 		};
 		class Item34
 		{
@@ -7545,8 +7553,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20308.443,28.040586,7699.3809};
-						angles[]={0.042638395,3.4215434,6.2485409};
+						position[]={20482.879,34.084488,7551.0708};
+						angles[]={0,3.1415927,0};
 					};
 					side="East";
 					flags=7;
@@ -7555,7 +7563,7 @@ class Mission
 					};
 					id=362;
 					type="O_crew_F";
-					atlOffset=-1.9073486e-006;
+					atlOffset=1.9073486e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7610,15 +7618,15 @@ class Mission
 				};
 			};
 			id=361;
-			atlOffset=-1.9073486e-006;
+			atlOffset=-0.00045394897;
 		};
 		class Item35
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={20308.506,29.862261,7699.4087};
-				angles[]={0.042638395,3.4215434,6.2485409};
+				position[]={20482.879,35.908916,7551.02};
+				angles[]={0,3.1415927,0};
 			};
 			side="East";
 			flags=6;
@@ -7631,7 +7639,7 @@ class Mission
 			};
 			id=364;
 			type="B_MBT_01_mlrs_F";
-			atlOffset=-1.9073486e-006;
+			atlOffset=-0.00045394897;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7661,8 +7669,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={20335.951,28.210373,7690.7393};
-				angles[]={0.013334315,3.4215434,0.20762436};
+				position[]={20482.879,35.908916,7551.02};
+				angles[]={0,3.4215434,0};
 			};
 			side="East";
 			flags=6;
@@ -7675,7 +7683,7 @@ class Mission
 			};
 			id=365;
 			type="B_MBT_01_mlrs_F";
-			atlOffset=-0.01984024;
+			atlOffset=-0.00045394897;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7699,6 +7707,23 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item37
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21160.072,21.378119,7540.1235};
+				angles[]={0.0080009829,0,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=367;
+			type="B_MBT_01_TUSK_F";
+			atlOffset=-0.0045814514;
 		};
 	};
 	class Connections

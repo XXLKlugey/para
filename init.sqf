@@ -4,6 +4,7 @@ private _type = "B_MBT_01_mlrs_F";
 
 private _vehtype = [];
 private _pos = [];
+private _tpos = [];
 private _dist = 0;
 {
 	if (side _x == _side && vehicle _x isKindOf _type) then
@@ -13,7 +14,7 @@ private _dist = 0;
 }forEach vehicles;
 
 {	
-	_pos = [getPos _x, 0, 1500, 5, 0, 20, 0] call BIS_fnc_findSafePos;
+	_pos = [getPos _x, 0, 1500, 5, 0, 0.25, 0] call BIS_fnc_findSafePos;
 	_x setPos _pos;
 	private _dir = direction _x;
 	private _xdir = 5*sin(_dir);
@@ -24,6 +25,9 @@ private _dist = 0;
 	_vehgrp setBehaviour "CARELESS";
 	_dist = 0;
 }forEach _vehtype;
+
+[]execVM ("tower_pos.sqf");
+
 {
 	if(side _x == WEST) then
 	{
@@ -35,11 +39,11 @@ private _dist = 0;
 if (playersNumber WEST > 1) then
 {
 	sleep 5;
-	[]execVM ("task_alpha.sqf");
-	waitUntil {taskState TASK_ALPHA == "SUCCEEDED"};
+	script_handler = []execVM ("task_alpha.sqf");
+	waitUntil { scriptDone script_handler };
 };
 
 //----------GET TASK_BRAVO
 sleep 5;
-[]execVM ("task_bravo.sqf");
-waitUntil {taskState TASK_BRAVO == "SUCCEEDED"};
+script_handler =  []execVM ("task_bravo.sqf");
+waitUntil { scriptDone script_handler };

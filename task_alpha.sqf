@@ -1,6 +1,6 @@
 private _random = allPlayers select 0;
 private _counter = 0;
-private _range = 10;
+private _range = 25;
 while {_counter < playersNumber WEST} do 
 {
 	_counter = 0;
@@ -10,7 +10,7 @@ while {_counter < playersNumber WEST} do
 		};
 	} forEach allPlayers;
 	
-	sleep 5;
+	sleep 2;
 };
 
 
