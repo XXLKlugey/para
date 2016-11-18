@@ -26,7 +26,7 @@ private _dist = 0;
 	_dist = 0;
 }forEach _vehtype;
 
-[]execVM ("tower_pos.sqf");
+//[]execVM ("tower_pos.sqf");
 
 {
 	if(side _x == WEST) then
@@ -47,3 +47,11 @@ if (playersNumber WEST > 1) then
 sleep 5;
 script_handler =  []execVM ("task_bravo.sqf");
 waitUntil { scriptDone script_handler };
+
+//----------GET TASK_CHARLIE
+sleep 5;
+script_handler =  []execVM ("task_charlie.sqf");
+waitUntil { scriptDone script_handler };
+
+sleep 5;
+"EveryoneWon" call BIS_fnc_endMissionServer;

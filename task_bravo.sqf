@@ -7,6 +7,7 @@ private _naming = ["st","nd","rd","th","th","th"];
 private _vehtype = [];
 private _spos = [];
 private _task = "";
+private _check = (playersNumber WEST)-1;
 {
   _x1 = _x;
 	if (side _x1 == _side && vehicle _x1 isKindOf _type) then
@@ -41,7 +42,7 @@ private _task = "";
 			if (!alive _x) then
 			{
 				private _finder = _vehtype find _x;
-				private _select = _tasktype select _finder;
+				private _select = _tasktype select _finder + _check;
 				_select  setTaskState "SUCCEEDED";
 				
 				private _debug2 = str _finder;
@@ -76,7 +77,7 @@ private _task = "";
 				if (!alive _x) then
 				{
 					private _finder = _vehtype find _x;
-					private _select = _tasktype select _finder;
+					private _select = _tasktype select _finder + _check;
 					_select  setTaskState "SUCCEEDED";
 					
 					private _debug2 = str _finder;
@@ -90,7 +91,7 @@ private _task = "";
 					if (!alive _x) then
 						{
 						private _finder = _vehtype find _x;
-						private _select = _tasktype select _finder;
+						private _select = _tasktype select _finder + _check;
 						_select  setTaskState "SUCCEEDED";
 						
 						private _debug2 = str _finder;
@@ -113,7 +114,7 @@ private _task = "";
 			if (!alive _x) then
 			{
 				private _finder = _vehtype find _x;
-				private _select = _tasktype select _finder;
+				private _select = _tasktype select _finder + _check;
 				_select  setTaskState "SUCCEEDED";
 				
 				private _debug2 = str _finder;
@@ -155,7 +156,7 @@ private _task = "";
 			else
 			{
 				private _finder = _vehtype find _x;
-				private _select = _tasktype select _finder;
+				private _select = _tasktype select _finder + _check;
 				_select  setTaskState "SUCCEEDED";
 				
 				private _debug2 = str _finder;

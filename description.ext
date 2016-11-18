@@ -1,9 +1,9 @@
-overviewText = "Autos SooS";
+overviewText = "Operation Honeymoon";
 overviewTextLocked = "Manche sagen Honig sei besser als Nutella.";
 overviewPicture = "para_preview.paa";
 author = "SimonEff & XXLKlugey";
 
-onLoadName = "Autos SooS"; 
+onLoadName = "Operation Honeymoon"; 
 onLoadMission = "Manche sagen Honig sei besser als Nutella.";
 loadScreen = "para_preview.paa";
 class Header
